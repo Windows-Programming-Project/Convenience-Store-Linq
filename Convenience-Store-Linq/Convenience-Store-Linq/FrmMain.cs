@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Convenience_Store_Linq
 {
-    public partial class Form1 : Form
+    public partial class FrmMain : Form
     {
-        public Form1()
+        public FrmMain()
         {
             int a;
             ///aaaaaaaaaaaaaaaaaaaaaaaaaaa
