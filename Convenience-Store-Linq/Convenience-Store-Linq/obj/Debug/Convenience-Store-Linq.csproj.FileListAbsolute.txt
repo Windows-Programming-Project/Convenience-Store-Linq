@@ -1,0 +1,14 @@
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\bin\Debug\Convenience-Store-Linq.exe.config
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\bin\Debug\Convenience-Store-Linq.exe
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\bin\Debug\Convenience-Store-Linq.pdb
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience-Store-Linq.csproj.AssemblyReference.cache
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience-Store-Linq.csproj.SuggestedBindingRedirects.cache
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmManuafacture.resources
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.Properties.Resources.resources
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience-Store-Linq.csproj.GenerateResource.cache
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience-Store-Linq.csproj.CoreCompileInputs.cache
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience-Store-Linq.exe
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience-Store-Linq.pdb
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmStock.resources
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmType.resources
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmSupplier.resources

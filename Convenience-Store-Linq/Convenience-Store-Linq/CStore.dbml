@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ConvenienceStore" Class="CStoreDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=ConvenienceStore;Integrated Security=True" SettingsObjectName="Convenience_Store_Linq.Properties.Settings" SettingsPropertyName="ConvenienceStoreConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Account" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="aUsername" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="aPassword" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="eID" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="aEmail" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Employee_Account" Member="Employee" ThisKey="eID" OtherKey="eID" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="cID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="cTotalpay" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cPhoneNum" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_Invoice" Member="Invoices" ThisKey="cID" OtherKey="cID" Type="Invoice" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Detail" Member="Details">
+    <Type Name="Detail">
+      <Column Name="iID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="dAmount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Invoice_Detail" Member="Invoice" ThisKey="iID" OtherKey="iID" Type="Invoice" IsForeignKey="true" />
+      <Association Name="Product_Detail" Member="Product" ThisKey="pID" OtherKey="pID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employee" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="eID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="eName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="eBirthdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="eGender" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ePhone" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="eAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ePosition" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="eSalary" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="eImage" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Employee_Account" Member="Accounts" ThisKey="eID" OtherKey="eID" Type="Account" />
+      <Association Name="Employee_Invoice" Member="Invoices" ThisKey="eID" OtherKey="eID" Type="Invoice" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Invoice" Member="Invoices">
+    <Type Name="Invoice">
+      <Column Name="iID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="eID" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="cID" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="iDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="iTotalpay" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Invoice_Detail" Member="Details" ThisKey="iID" OtherKey="iID" Type="Detail" />
+      <Association Name="Customer_Invoice" Member="Customer" ThisKey="cID" OtherKey="cID" Type="Customer" IsForeignKey="true" />
+      <Association Name="Employee_Invoice" Member="Employee" ThisKey="eID" OtherKey="eID" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Manuafacture" Member="Manuafactures">
+    <Type Name="Manuafacture">
+      <Column Name="mID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="mLocation" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Association Name="Manuafacture_Supplier" Member="Suppliers" ThisKey="mID" OtherKey="mID" Type="Supplier" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="pID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="pPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="tID" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="pImage" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="batchID" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="Product_Detail" Member="Details" ThisKey="pID" OtherKey="pID" Type="Detail" />
+      <Association Name="Stock_Product" Member="Stock" ThisKey="batchID" OtherKey="batchID" Type="Stock" IsForeignKey="true" />
+      <Association Name="Type_Product" Member="Type" ThisKey="tID" OtherKey="tID" Type="Type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stock" Member="Stocks">
+    <Type Name="Stock">
+      <Column Name="batchID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="imDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="amountofProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sID" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Stock_Product" Member="Products" ThisKey="batchID" OtherKey="batchID" Type="Product" />
+      <Association Name="Supplier_Stock" Member="Supplier" ThisKey="sID" OtherKey="sID" Type="Supplier" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Supplier" Member="Suppliers">
+    <Type Name="Supplier">
+      <Column Name="sID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mID" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="sName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="Supplier_Stock" Member="Stocks" ThisKey="sID" OtherKey="sID" Type="Stock" />
+      <Association Name="Manuafacture_Supplier" Member="Manuafacture" ThisKey="mID" OtherKey="mID" Type="Manuafacture" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Type" Member="Types">
+    <Type Name="Type">
+      <Column Name="tID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Type_Product" Member="Products" ThisKey="tID" OtherKey="tID" Type="Product" />
+    </Type>
+  </Table>
+</Database>

@@ -1,6 +1,6 @@
 ﻿namespace Convenience_Store_Linq
 {
-    partial class Form1
+    partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
