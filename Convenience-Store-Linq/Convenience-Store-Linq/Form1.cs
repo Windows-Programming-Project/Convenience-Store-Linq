@@ -14,6 +14,8 @@ namespace Convenience_Store_Linq
     {
         public Form1()
         {
+            int a;
+            ///aaaaaaaaaaaaaaaaaaaaaaaaaaa
             InitializeComponent();
         }
     }
