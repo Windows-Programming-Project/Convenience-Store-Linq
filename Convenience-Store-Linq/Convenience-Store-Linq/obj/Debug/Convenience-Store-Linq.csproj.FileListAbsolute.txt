@@ -12,3 +12,6 @@ D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-L
 D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmStock.resources
 D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmType.resources
 D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmSupplier.resources
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmDetail.resources
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmInvoice.resources
+D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmProduct.resources

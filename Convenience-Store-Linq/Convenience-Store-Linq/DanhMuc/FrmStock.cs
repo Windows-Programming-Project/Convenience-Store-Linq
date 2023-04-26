@@ -55,6 +55,8 @@ namespace Convenience_Store_Linq.DanhMuc
         private void FrmStock_Load(object sender, EventArgs e)
         {
             LoadData();
+            int foreignKeyColumnIndex = dgvSTOCK.Columns["Supplier"].Index;
+            dgvSTOCK.Columns[foreignKeyColumnIndex].Visible = false;
         }
         private void btnReLoad_Click(object sender, EventArgs e)
         {

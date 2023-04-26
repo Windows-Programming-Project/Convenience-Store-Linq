@@ -20,7 +20,8 @@ namespace Convenience_Store_Linq
             //Application.Run(new FrmManuafacture());
             //Application.Run(new FrmType());
             //Application.Run(new FrmStock());
-            Application.Run(new FrmSupplier());
+            //Application.Run(new FrmSupplier());
+            Application.Run(new FrmDetail());
         }
     }
 }
