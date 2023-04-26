@@ -39,7 +39,6 @@
       <Column Name="eAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ePosition" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Column Name="eSalary" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="eImage" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="Employee_Account" Member="Accounts" ThisKey="eID" OtherKey="eID" Type="Account" />
       <Association Name="Employee_Invoice" Member="Invoices" ThisKey="eID" OtherKey="eID" Type="Invoice" />
     </Type>
@@ -70,7 +69,6 @@
       <Column Name="pName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="pPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="tID" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="pImage" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="batchID" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Association Name="Product_Detail" Member="Details" ThisKey="pID" OtherKey="pID" Type="Detail" />
       <Association Name="Stock_Product" Member="Stock" ThisKey="batchID" OtherKey="batchID" Type="Stock" IsForeignKey="true" />

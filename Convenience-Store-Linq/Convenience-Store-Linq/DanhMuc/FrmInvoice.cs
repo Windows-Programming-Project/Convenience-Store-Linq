@@ -1,5 +1,4 @@
-﻿using Convenience_Store_Linq.BS_Layer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,16 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Convenience_Store_Linq.BS_Layer;
 
 namespace Convenience_Store_Linq.DanhMuc
 {
-    public partial class FrmSupplier : Form
+    public partial class FrmInvoice : Form
     {
         // Khai báo biến kiểm tra việc Thêm hay Sửa dữ liệu
         bool Them;
         string err;
-        BLSupplier dbSUP = new BLSupplier();
-        public FrmSupplier()
+        BLInvoice dbMA = new BLInvoice();
+        public FrmInvoice()
         {
             InitializeComponent();
         }
@@ -27,13 +27,15 @@ namespace Convenience_Store_Linq.DanhMuc
             {
 
                 // Đưa dữ liệu lên DataGridView
-                dgvSUPPLIER.DataSource = dbSUP.TakeSupplier();
+                dgvINVOICE.DataSource = dbMA.TakeInvoice();
                 // Thay đổi độ rộng cột
-                dgvSUPPLIER.AutoResizeColumns();
+                dgvINVOICE.AutoResizeColumns();
                 // Xóa trống các đối tượng trong Panel
-                this.txtsID.ResetText();
-                this.txtmID.ResetText();
-                this.txtsName.ResetText();
+                this.txtIDI.ResetText();
+                this.txtIDE.ResetText();
+                this.txtIDC.ResetText();
+                this.txtiDate.ResetText();
+                this.txtiTotal.ResetText();
                 // Không cho thao tác trên các nút Lưu / Hủy
                 this.btnSave.Enabled = false;
                 this.btnCancel.Enabled = false;
@@ -44,74 +46,35 @@ namespace Convenience_Store_Linq.DanhMuc
                 this.btnDelete.Enabled = true;
 
                 //
-                dgvSUPPLIER_CellClick(null, null);
+                dgvINVOICE_CellClick(null, null);
             }
             catch
             {
-                MessageBox.Show("Không lấy được nội dung trong table SUPPLIER. Lỗi rồi!!!");
+                MessageBox.Show("Không lấy được nội dung trong table INVOICE. Lỗi rồi!!!");
             }
         }
-        private void FrmSupplier_Load(object sender, EventArgs e)
-        {
-            LoadData();
-            int foreignKeyColumnIndex= dgvSUPPLIER.Columns["Manuafacture"].Index;
-            dgvSUPPLIER.Columns[foreignKeyColumnIndex].Visible = false;
-        }
-        private void btnReLoad_Click(object sender, EventArgs e)
-        {
-            LoadData();
-        }
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            this.txtsID.Enabled = true;
-
-            // Kich hoạt biến Them
-            Them = true;
-            // Xóa trống các đối tượng trong Panel
-            this.txtsID.ResetText();
-            this.txtmID.ResetText();
-            this.txtsName.ResetText();
-            // Cho thao tác trên các nút Lưu / Hủy / Panel
-            this.btnSave.Enabled = true;
-            this.btnCancel.Enabled = true;
-            this.panel.Enabled = true;
-            // Không cho thao tác trên các nút Thêm / Xóa / Thoát
-            this.btnAdd.Enabled = false;
-            this.btnFix.Enabled = false;
-            this.btnDelete.Enabled = false;
-
-            // Đưa con trỏ đến TextField txtsID
-            this.txtsID.Focus();
-        }
-        private void btnFix_Click(object sender, EventArgs e)
-        {
-            // Kích hoạt biến Sửa
-            Them = false;
-            // Cho phép thao tác trên Panel
-            this.panel.Enabled = true;
-            dgvSUPPLIER_CellClick(null, null);
-            // Cho thao tác trên các nút Lưu / Hủy / Panel
-            this.btnSave.Enabled = true;
-            this.btnCancel.Enabled = true;
-            this.panel.Enabled = true;
-            // Không cho thao tác trên các nút Thêm / Xóa / Thoát
-            this.btnAdd.Enabled = false;
-            this.btnFix.Enabled = false;
-            this.btnDelete.Enabled = false;
-
-            // Đưa con trỏ đến TextField txtsID
-            this.txtsID.Enabled = false;
-            this.txtmID.Focus();
-
-        }
-        private void dgvSUPPLIER_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvINVOICE_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Thứ tự dòng hiện hành
-            int r = dgvSUPPLIER.CurrentCell.RowIndex;
+            int r = dgvINVOICE.CurrentCell.RowIndex;
             // Chuyển thông tin lên panel
-            this.txtsID.Text = dgvSUPPLIER.Rows[r].Cells[0].Value.ToString();
-            this.txtmID.Text = dgvSUPPLIER.Rows[r].Cells[1].Value.ToString();
-            this.txtsName.Text = dgvSUPPLIER.Rows[r].Cells[2].Value.ToString();
+            this.txtIDI.Text = dgvINVOICE.Rows[r].Cells[0].Value.ToString();
+            this.txtIDE.Text = dgvINVOICE.Rows[r].Cells[1].Value.ToString();
+            this.txtIDC.Text = dgvINVOICE.Rows[r].Cells[2].Value.ToString();
+            this.txtiDate.Text = dgvINVOICE.Rows[r].Cells[3].Value.ToString();
+            this.txtiTotal.Text = dgvINVOICE.Rows[r].Cells[4].Value.ToString();
+        }
+        private void FrmInvoice_Load(object sender, EventArgs e)
+        {
+            LoadData();
+            int foreignKeyColumnIndex1 = dgvINVOICE.Columns["Customer"].Index;
+            int foreignKeyColumnIndex2 = dgvINVOICE.Columns["Employee"].Index;
+            dgvINVOICE.Columns[foreignKeyColumnIndex1].Visible = false;
+            dgvINVOICE.Columns[foreignKeyColumnIndex2].Visible = false;
+        }
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -123,22 +86,48 @@ namespace Convenience_Store_Linq.DanhMuc
             // Kiểm tra có nhắp chọn nút Ok không?
             if (traloi == DialogResult.OK) this.Close();
         }
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
+            this.txtIDI.Enabled = true;
+            // Kich hoạt biến Them
+            Them = true;
             // Xóa trống các đối tượng trong Panel
-            this.txtsID.ResetText();
-            this.txtmID.ResetText();
-            this.txtsName.ResetText();
-            // Cho thao tác trên các nút Thêm / Sửa / Xóa / Thoát
-            this.btnAdd.Enabled = true;
-            this.btnFix.Enabled = true;
-            this.btnDelete.Enabled = true;
+            this.txtIDI.ResetText();
+            this.txtIDE.ResetText();
+            this.txtIDC.ResetText();
+            this.txtiDate.ResetText();
+            this.txtiTotal.ResetText();
+            // Cho thao tác trên các nút Lưu / Hủy / Panel
+            this.btnSave.Enabled = true;
+            this.btnCancel.Enabled = true;
+            this.panel.Enabled = true;
+            // Không cho thao tác trên các nút Thêm / Xóa / Thoát
+            this.btnAdd.Enabled = false;
+            this.btnFix.Enabled = false;
+            this.btnDelete.Enabled = false;
 
-            // Không cho thao tác trên các nút Lưu / Hủy / Panel
-            this.btnSave.Enabled = false;
-            this.btnCancel.Enabled = false;
-            this.panel.Enabled = false;
-            dgvSUPPLIER_CellClick(null, null);
+            // Đưa con trỏ đến TextField txtIDI
+            this.txtIDI.Focus();
+        }
+        private void btnFix_Click(object sender, EventArgs e)
+        {
+            // Kích hoạt biến Sửa
+            Them = false;
+            // Cho phép thao tác trên Panel
+            this.panel.Enabled = true;
+            dgvINVOICE_CellClick(null, null);
+            // Cho thao tác trên các nút Lưu / Hủy / Panel
+            this.btnSave.Enabled = true;
+            this.btnCancel.Enabled = true;
+            this.panel.Enabled = true;
+            // Không cho thao tác trên các nút Thêm / Xóa / Thoát
+            this.btnAdd.Enabled = false;
+            this.btnFix.Enabled = false;
+            this.btnDelete.Enabled = false;
+
+            // Đưa con trỏ đến TextField txtIDE
+            this.txtIDI.Enabled = false;
+            this.txtIDE.Focus();
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -149,8 +138,8 @@ namespace Convenience_Store_Linq.DanhMuc
                 try
                 {
                     // Thực hiện lệnh
-                    BLSupplier blSup = new BLSupplier();
-                    blSup.AddSupplier(this.txtsID.Text, this.txtmID.Text, this.txtsName.Text, ref err);
+                    BLInvoice blMa = new BLInvoice();
+                    blMa.AddInvoice(this.txtIDI.Text, this.txtIDE.Text, this.txtIDC.Text,DateTime.Parse(this.txtiDate.Text),float.Parse(this.txtiTotal.Text), ref err);
                     // Load lại dữ liệu trên DataGridView
                     LoadData();
                     // Thông báo
@@ -164,8 +153,8 @@ namespace Convenience_Store_Linq.DanhMuc
             else
             {
                 // Thực hiện lệnh
-                BLSupplier blSup = new BLSupplier();
-                blSup.UpdateSupplier(this.txtsID.Text, this.txtmID.Text, this.txtsName.Text, ref err);
+                BLInvoice blMa = new BLInvoice();
+                blMa.UpdateInvoice(this.txtIDI.Text, this.txtIDE.Text, this.txtIDC.Text, DateTime.Parse(this.txtiDate.Text), float.Parse(this.txtiTotal.Text), ref err);
                 // Load lại dữ liệu trên DataGridView
                 LoadData();
                 // Thông báo
@@ -173,15 +162,35 @@ namespace Convenience_Store_Linq.DanhMuc
             }
             // Đóng kết nối
         }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            // Xóa trống các đối tượng trong Panel
+            this.txtIDI.ResetText();
+            this.txtIDE.ResetText();
+            this.txtIDC.ResetText();
+            this.txtiDate.ResetText();
+            this.txtiTotal.ResetText();
+            // Cho thao tác trên các nút Thêm / Sửa / Xóa / Thoát
+            this.btnAdd.Enabled = true;
+            this.btnFix.Enabled = true;
+            this.btnDelete.Enabled = true;
+
+            // Không cho thao tác trên các nút Lưu / Hủy / Panel
+            this.btnSave.Enabled = false;
+            this.btnCancel.Enabled = false;
+            this.panel.Enabled = false;
+            dgvINVOICE_CellClick(null, null);
+        }
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
             {
                 // Thực hiện lệnh
                 // Lấy thứ tự record hiện hành
-                int r = dgvSUPPLIER.CurrentCell.RowIndex;
-                string strSUP =
-                dgvSUPPLIER.Rows[r].Cells[0].Value.ToString();
+                int r = dgvINVOICE.CurrentCell.RowIndex;
+                string strMA1 = dgvINVOICE.Rows[r].Cells[0].Value.ToString();
+                string strMA2 = dgvINVOICE.Rows[r].Cells[1].Value.ToString();
+                string strMA3 = dgvINVOICE.Rows[r].Cells[2].Value.ToString();
                 // Viết câu lệnh SQL
                 // Hiện thông báo xác nhận việc xóa mẫu tin
                 // Khai báo biến traloi
@@ -192,7 +201,7 @@ namespace Convenience_Store_Linq.DanhMuc
                 // Kiểm tra có nhắp chọn nút Ok không?
                 if (traloi == DialogResult.Yes)
                 {
-                    dbSUP.DeleteSupplier(ref err, strSUP);
+                    dbMA.DeleteInvoice(ref err, strMA1, strMA2, strMA3);
                     // Cập nhật lại DataGridView
                     LoadData();
                     // Thông báo

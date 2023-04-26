@@ -61,7 +61,7 @@ namespace Convenience_Store_Linq.DanhMuc
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            this.txtmID.Enabled = false;
+            this.txtmID.Enabled = true;
             // Kich hoạt biến Them
             Them = true;
             // Xóa trống các đối tượng trong Panel

@@ -772,8 +772,6 @@ namespace Convenience_Store_Linq
 		
 		private System.Nullable<double> _eSalary;
 		
-		private System.Data.Linq.Binary _eImage;
-		
 		private EntitySet<Account> _Accounts;
 		
 		private EntitySet<Invoice> _Invoices;
@@ -798,8 +796,6 @@ namespace Convenience_Store_Linq
     partial void OnePositionChanged();
     partial void OneSalaryChanging(System.Nullable<double> value);
     partial void OneSalaryChanged();
-    partial void OneImageChanging(System.Data.Linq.Binary value);
-    partial void OneImageChanged();
     #endregion
 		
 		public Employee()
@@ -965,26 +961,6 @@ namespace Convenience_Store_Linq
 					this._eSalary = value;
 					this.SendPropertyChanged("eSalary");
 					this.OneSalaryChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_eImage", DbType="Image", UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary eImage
-		{
-			get
-			{
-				return this._eImage;
-			}
-			set
-			{
-				if ((this._eImage != value))
-				{
-					this.OneImageChanging(value);
-					this.SendPropertyChanging();
-					this._eImage = value;
-					this.SendPropertyChanged("eImage");
-					this.OneImageChanged();
 				}
 			}
 		}
@@ -1480,8 +1456,6 @@ namespace Convenience_Store_Linq
 		
 		private string _tID;
 		
-		private System.Data.Linq.Binary _pImage;
-		
 		private string _batchID;
 		
 		private EntitySet<Detail> _Details;
@@ -1502,8 +1476,6 @@ namespace Convenience_Store_Linq
     partial void OnpPriceChanged();
     partial void OntIDChanging(string value);
     partial void OntIDChanged();
-    partial void OnpImageChanging(System.Data.Linq.Binary value);
-    partial void OnpImageChanged();
     partial void OnbatchIDChanging(string value);
     partial void OnbatchIDChanged();
     #endregion
@@ -1596,26 +1568,6 @@ namespace Convenience_Store_Linq
 					this._tID = value;
 					this.SendPropertyChanged("tID");
 					this.OntIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pImage", DbType="Image", UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary pImage
-		{
-			get
-			{
-				return this._pImage;
-			}
-			set
-			{
-				if ((this._pImage != value))
-				{
-					this.OnpImageChanging(value);
-					this.SendPropertyChanging();
-					this._pImage = value;
-					this.SendPropertyChanged("pImage");
-					this.OnpImageChanged();
 				}
 			}
 		}
