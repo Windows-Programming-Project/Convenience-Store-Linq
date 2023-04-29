@@ -15,3 +15,23 @@ D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-L
 D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmDetail.resources
 D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmInvoice.resources
 D:\FinalWindow\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmProduct.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\bin\Debug\Convenience-Store-Linq.exe.config
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\bin\Debug\Convenience-Store-Linq.exe
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\bin\Debug\Convenience-Store-Linq.pdb
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience-Store-Linq.csproj.AssemblyReference.cache
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience-Store-Linq.csproj.SuggestedBindingRedirects.cache
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmDetail.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmInvoice.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmManuafacture.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmProduct.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmStock.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmSupplier.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmType.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.Properties.Resources.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience-Store-Linq.csproj.GenerateResource.cache
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience-Store-Linq.csproj.CoreCompileInputs.cache
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience-Store-Linq.exe
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience-Store-Linq.pdb
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmCustomer.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmEmployee.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Lind Q Version\Convenience-Store-Linq\Convenience-Store-Linq\Convenience-Store-Linq\obj\Debug\Convenience_Store_Linq.DanhMuc.FrmAccount.resources
